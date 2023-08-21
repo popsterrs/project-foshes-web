@@ -1,5 +1,6 @@
 'use client'
 import 'src/app/styles/header.css';
+import { PrimaryButton, SecondaryButton } from 'src/app/components/ui/buttons.js'
 
 export default function Header() {
     return (
@@ -8,14 +9,13 @@ export default function Header() {
                 <h6 className='header-title'>Foshes Universe</h6>
 
                 <div className='header-navbar'>
-                    <button>Items</button>
-                    <button>Players</button>
-                    <button>Trading</button>
+                    <a href='items'>Items</a>
+                    <a href='players'>Players</a>
+                    <a href='trading'>Trading</a>
+                    <a href='blogs'>Blogs</a>
                 </div>
 
-                <button className='header-sign-in'>
-                    Sign Into Roblox
-                </button>
+                <PrimaryButton content={<span>Sign Into Roblox</span>} className='header-sign-in'/>
             </div>
         </header>
     );

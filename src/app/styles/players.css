@@ -1,0 +1,9 @@
+.players-bounds {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100vw;
+    height: calc(100vh + 4rem);
+    overflow: hidden;
+}
