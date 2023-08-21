@@ -13,11 +13,18 @@ function GetItems() {
       });
   }
 
+  function GetImageURL() {
+    
+  }
+
 function ItemCard(props) {
     return (
-        <div>
-            <h1>{props.name}</h1>
-            <p>{props.description}</p>
+        <div className='items-grid-card'>
+            <img src=(props.)/>
+            <div className='items-grid-card-info'>
+                <h1>{props.name}</h1>
+                <p>{(props.description != "") ? props.description : 'No Description Fount'}</p>
+            </div>
         </div>
     )
 }
@@ -34,10 +41,28 @@ function ItemsGrid() {
     }, []);
 
     return (
-        <div>
-        {items.map(item => (
-            <ItemCard {...item}></ItemCard>
-        ))}
+        <div className='items-grid'>
+            {items.map(item => (
+                <ItemCard {...item}></ItemCard>
+            ))}
+                        {items.map(item => (
+                <ItemCard {...item}></ItemCard>
+            ))}
+                        {items.map(item => (
+                <ItemCard {...item}></ItemCard>
+            ))}
+                        {items.map(item => (
+                <ItemCard {...item}></ItemCard>
+            ))}
+                        {items.map(item => (
+                <ItemCard {...item}></ItemCard>
+            ))}
+                        {items.map(item => (
+                <ItemCard {...item}></ItemCard>
+            ))}
+                        {items.map(item => (
+                <ItemCard {...item}></ItemCard>
+            ))}
       </div>
     )
 }

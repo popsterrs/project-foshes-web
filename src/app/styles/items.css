@@ -1,9 +1,40 @@
 .items-bounds {
     display: flex;
-    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    gap: 10px;
+    width: 100%;
+    background-color: yellow;
+}
+
+.items-grid-card {
+    display: flex;
     justify-content: center;
     position: relative;
-    width: 100vw;
-    height: calc(100vh + 4rem);
-    overflow: hidden;
+    height: 16rem;
+    background-color: green;
+}
+
+.items-grid-card-info {
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+}
+
+.items-grid-card-info h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: red;
+}
+
+.items-grid-card-info p {
+    font-size: 1rem;
+    text-align: center;
+    background-color: pink;
 }
