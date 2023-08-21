@@ -2,14 +2,25 @@
     display: flex;
     justify-content: center;
     width: 100vw;
+    min-height: 100vh;
     overflow: hidden;
+}
+
+.items-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1536px;
+    height: 100%;
+    position: relative;
 }
 
 .items-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 10px;
     width: 100%;
+    padding: 1rem;
     background-color: yellow;
 }
 
@@ -17,7 +28,7 @@
     display: flex;
     justify-content: center;
     position: relative;
-    height: 16rem;
+    height: 20rem;
     background-color: green;
 }
 

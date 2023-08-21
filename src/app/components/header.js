@@ -6,7 +6,9 @@ export default function Header() {
     return (
         <header className='header-bounds'>
             <div className='header-wrapper'>
-                <h6 className='header-title'>Foshes Universe</h6>
+                <a href='/'>
+                    <h6 className='header-title'>Foshes Universe</h6>
+                </a>
 
                 <div className='header-navbar'>
                     <a href='items'>Items</a>
