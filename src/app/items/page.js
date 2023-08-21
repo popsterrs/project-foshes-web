@@ -1,38 +1,44 @@
+'use client'
 import 'src/app/styles/items.css'
+import React, { useState, useEffect } from 'react';
 
-async function GetItems() {
-    try {
-        const response = await fetch('https://api.projectfoshes.com/items');
-        const data = await response.json();
-    
-        return {
-          props: {
-            items: data,
-          },
-        };
-      } catch (error) {
+
+function GetItems() {
+    return fetch('https://api.projectfoshes.com/items')
+      .then(response => response.json())
+      .then(data => data.items)
+      .catch(error => {
         console.error('Error fetching data:', error);
-        return {
-          props: {
-            items: [],
-          },
-        };
-      }
-}
+        return [];
+      });
+  }
 
 function ItemCard(props) {
     return (
         <div>
-
+            <h1>{props.name}</h1>
+            <p>{props.description}</p>
         </div>
     )
 }
 
-function ItemsGrid() {
+function ItemsGrid() { 
+    const [items, setItems] = useState([]);
+
+    useEffect(() => {
+      async function fetchData() {
+        const fetchedItems = await GetItems();
+        setItems(fetchedItems);
+      }
+      fetchData();
+    }, []);
+
     return (
         <div>
-            <pre>{JSON.stringify(GetItems(), null, 2)}</pre>
-        </div>
+        {items.map(item => (
+            <ItemCard {...item}></ItemCard>
+        ))}
+      </div>
     )
 }
 
