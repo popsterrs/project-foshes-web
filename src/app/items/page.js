@@ -38,7 +38,7 @@ function Image(props) {
 function ItemCard(props) {
     return (
         <div className='items-grid-card'>
-            <Image {...props}/>
+            <Image {...props} />
 
             <div className='items-grid-card-info'>
                 <h1>{props.name}</h1>
@@ -90,7 +90,7 @@ export default function Items() {
     return (
         <div className='items-bounds'>
             <div className='items-wrapper'>
-                <ItemsGrid></ItemsGrid> 
+                <ItemsGrid></ItemsGrid>
             </div>
         </div>
     )
