@@ -13,7 +13,7 @@
   --colour-7: rgb(78, 78, 78);
   --colour-8: rgb(62, 62, 62);
   --colour-9: rgb(23, 23, 23);
-  
+
   --accent-1: rgba(81, 12, 243, 0.295);
   --accent-2: rgba(29, 18, 125, 0.73);
 
@@ -44,13 +44,11 @@
   }
 }
 
-
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 };
-
 
 body {
   position: relative;
