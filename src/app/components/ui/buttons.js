@@ -8,7 +8,6 @@ function PrimaryButton(props) {
     );
 }
 
-
 function SecondaryButton(props) {
     return (
         <button className={`secondary ${props.className}`} onClick={props.onClick}>
@@ -16,8 +15,6 @@ function SecondaryButton(props) {
         </button>
     );
 }
-
-
 
 export {
     PrimaryButton,
