@@ -32,7 +32,6 @@
     color: var(--link-colour);
 }
 
-
 /* mobile */
 @media (max-width: 700px) {
     .footer-wrapper p {

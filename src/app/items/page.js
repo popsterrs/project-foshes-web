@@ -2,7 +2,6 @@
 import 'src/app/styles/items.css'
 import React, { useState, useEffect } from 'react';
 
-
 function GetItems() {
     return fetch('https://api.projectfoshes.com/items')
         .then(response => response.json())
