@@ -14,18 +14,26 @@ function GetItems() {
 
 function GetImageURL(imageID) {
     return fetch(`https://thumbnails.roblox.com/v1/assets?assetIds=${imageID}&returnPolicy=PlaceHolder&size=512x512&format=Png&isCircular=false`)
-        .then(response => response.json())
-        .then(data => data)
-        .catch(error => {
-            console.error('Error fetching data:', error);
-            return '';
+        .then(result => {
+            console.log(result);
+            result = result.json();
+            console.log(result);
         })
+        .catch(error => {
+            console.log(error);
+        });
 }
 
 function Image(props) {
     if (props.hasOwnProperty('icon')) {
+        // const imageURL = GetImageURL(props.icon).data[0].imageUrl
+
+
         return (
-            <img src={GetImageURL(props.icon).imageUrl}></img>
+            <div>
+                {/* <pre>{GetImageURL(props.icon)}</pre> */}
+            </div>
+            // <img src={GetImageURL(props.icon).imageUrl}></img>
         )
     } else {
         return (
@@ -61,26 +69,22 @@ function ItemsGrid() {
     return (
         <div className='items-grid'>
             {items.map(item => (
-                <ItemCard {...item}></ItemCard>
+                <ItemCard key={item.id}{...item}></ItemCard>
             ))}
             {items.map(item => (
-                <ItemCard {...item}></ItemCard>
+                <ItemCard key={item.id}{...item}></ItemCard>
             ))}
             {items.map(item => (
-                <ItemCard {...item}></ItemCard>
+                <ItemCard key={item.id}{...item}></ItemCard>
             ))}
             {items.map(item => (
-                <ItemCard {...item}></ItemCard>
+                <ItemCard key={item.id}{...item}></ItemCard>
             ))}
             {items.map(item => (
-                <ItemCard {...item}></ItemCard>
+                <ItemCard key={item.id}{...item}></ItemCard>
             ))}
-            {items.map(item => (
-                <ItemCard {...item}></ItemCard>
-            ))}
-            {items.map(item => (
-                <ItemCard {...item}></ItemCard>
-            ))}
+
+
         </div>
     )
 }
