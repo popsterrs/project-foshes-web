@@ -15,9 +15,10 @@ function GetItems() {
 function GetImageURL(imageID) {
     return fetch(`https://thumbnails.roblox.com/v1/assets?assetIds=${imageID}&returnPolicy=PlaceHolder&size=512x512&format=Png&isCircular=false`)
         .then(result => {
-            console.log(result);
             result = result.json();
-            console.log(result);
+        })
+        .then(data => {
+            console.log(data);
         })
         .catch(error => {
             console.log(error);
@@ -28,12 +29,14 @@ function Image(props) {
     if (props.hasOwnProperty('icon')) {
         // const imageURL = GetImageURL(props.icon).data[0].imageUrl
 
+        GetImageURL(props.icon);
 
         return (
             <div>
+                <img src={GetImageURL(props.icon).data[0].imageUrl}></img>
                 {/* <pre>{GetImageURL(props.icon)}</pre> */}
+                {/* <pre></pre>> */}
             </div>
-            // <img src={GetImageURL(props.icon).imageUrl}></img>
         )
     } else {
         return (
@@ -71,20 +74,6 @@ function ItemsGrid() {
             {items.map(item => (
                 <ItemCard key={item.id}{...item}></ItemCard>
             ))}
-            {items.map(item => (
-                <ItemCard key={item.id}{...item}></ItemCard>
-            ))}
-            {items.map(item => (
-                <ItemCard key={item.id}{...item}></ItemCard>
-            ))}
-            {items.map(item => (
-                <ItemCard key={item.id}{...item}></ItemCard>
-            ))}
-            {items.map(item => (
-                <ItemCard key={item.id}{...item}></ItemCard>
-            ))}
-
-
         </div>
     )
 }
