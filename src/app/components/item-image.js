@@ -7,7 +7,7 @@ export default function Image(props) {
         )
     } else {
         return (
-            <span>No Image Fount</span>
+            <span>No Image Found</span>
         )
     }
 }

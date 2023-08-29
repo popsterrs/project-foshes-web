@@ -14,7 +14,7 @@ function ItemCard(props) {
 
                 <div className='items-grid-card-info'>
                     <h1>{props.name}</h1>
-                    <p>{(props.description != "") ? props.description : 'No Description Fount'}</p>
+                    <p>{(props.description != "") ? props.description : 'No Description Found'}</p>
                 </div>
             </div>
         </a>
