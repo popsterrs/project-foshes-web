@@ -12,30 +12,39 @@ function GetItems() {
         });
 }
 
-function GetImageURL(imageID) {
-    return fetch(`https://thumbnails.roblox.com/v1/assets?assetIds=${imageID}&returnPolicy=PlaceHolder&size=512x512&format=Png&isCircular=false`)
-        .then(result => {
-            result = result.json();
-        })
-        .then(data => {
-            console.log(data);
-        })
-        .catch(error => {
-            console.log(error);
-        });
+function GetImageURLs(imageIds) {
+    const ids=imageIds.join(',')
+
+    console.log('called')
+
+    // return fetch(`http://thumbnails.roblox.com/v1/assets?assetIds=${ids}&returnPolicy=PlaceHolder&size=512x512&format=Png&isCircular=false`, { mode: 'no-cors'})
+    //     .then(result => {
+    //         result = result.json();
+    //     })
+    //     .then(data => {
+    //         console.log(data);
+    //     })
+    //     .catch(error => {
+    //         console.log(error);
+    //     });
+
+    fetch(`http://thumbnails.roblox.com/v1/assets?assetIds=${ids}&returnPolicy=PlaceHolder&size=512x512&format=Png&isCircular=false`, { mode: 'no-cors' })
+    .then(result => {
+        return result.json(); // Add a return statement here
+    })
+    .then(data => {
+        console.log(data);
+    })
+    .catch(error => {
+        console.error('An error occurred:', error);
+    });
 }
 
 function Image(props) {
     if (props.hasOwnProperty('icon')) {
-        // const imageURL = GetImageURL(props.icon).data[0].imageUrl
-
-        GetImageURL(props.icon);
-
         return (
             <div>
-                <img src={GetImageURL(props.icon).data[0].imageUrl}></img>
-                {/* <pre>{GetImageURL(props.icon)}</pre> */}
-                {/* <pre></pre>> */}
+
             </div>
         )
     } else {
@@ -60,11 +69,24 @@ function ItemCard(props) {
 
 function ItemsGrid() {
     const [items, setItems] = useState([]);
+    const imageIDs = [];
+    const [imageUrls, setImageUrls] = useState([]);
 
     useEffect(() => {
         async function fetchData() {
             const fetchedItems = await GetItems();
             setItems(fetchedItems);
+
+            for (const item of fetchedItems) {
+                imageIDs.push(item.icon)
+            };
+
+            const fetchedImageUrls = await GetImageURLs(imageIDs);
+            setImageUrls(fetchedImageUrls);
+
+            console.log(JSON.stringify(fetchedImageUrls));
+            console.log(imageUrls);
+            console.log(JSON.stringify(imageUrls));
         }
         fetchData();
     }, []);
