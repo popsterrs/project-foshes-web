@@ -44,3 +44,21 @@
     grid-column: span 6/span 6;
     padding-left: 1rem;
 }
+
+  /* mobile */
+  @media (max-width: 700px) {
+    .item-page-desktop {
+        display: flex;
+        flex-direction: column;
+        height: 200vh;
+      }
+    
+      .item-page-left {
+        padding: 6rem 0 0 0;
+        border: none;
+      }
+    
+      .item-page-right {
+        padding: 0;
+      }
+}
