@@ -1,33 +1,12 @@
 'use client'
 import 'src/app/styles/items.css'
+import Image from 'src/app/components/item-image.js';
+import { GetItems } from 'src/app/scripts/data.js';
 import React, { useState, useEffect } from 'react';
-
-function GetItems() {
-    return fetch('https://api.projectfoshes.com/items')
-        .then(response => response.json())
-        .then(data => data.items)
-        .catch(error => {
-            console.error('Error fetching data:', error);
-            return [];
-        });
-}
-
-function Image(props) {
-    if (props.hasOwnProperty('icon')) {
-        const imageUrl = 'https://assetdelivery.roblox.com/v1/asset/?id=' + props.icon
-
-        return (
-            <img src={imageUrl}></img>  
-        )
-    } else {
-        return (
-            <span>No Image Fount</span>
-        )
-    }
-}
 
 function ItemCard(props) {
     const itemPageUrl = 'items/' + props.id
+
     return (
         <a href={itemPageUrl}>
             <div className='items-grid-card'>
