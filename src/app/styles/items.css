@@ -23,6 +23,10 @@
     padding: 1rem;
 }
 
+.items-grid a {
+    display: block;
+}
+
 .items-grid-card {
     display: flex;
     justify-content: center;
@@ -34,7 +38,8 @@
 }
 
 .items-grid-card:hover {
-    
+    background: var(--colour-0);
+    box-shadow: 0 0 0 1px var(--colour-2);
 }
 
 .items-grid-card img {
@@ -50,6 +55,7 @@
 .items-grid-card-info h1 {
     font-size: 1.5rem;
     text-align: center;
+    color: var(--colour-9)
 }
 
 .items-grid-card-info p {

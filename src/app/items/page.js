@@ -27,15 +27,18 @@ function Image(props) {
 }
 
 function ItemCard(props) {
+    const itemPageUrl = 'items/' + props.id
     return (
-        <div className='items-grid-card'>
-            <Image {...props} />
+        <a href={itemPageUrl}>
+            <div className='items-grid-card'>
+                <Image {...props} />
 
-            <div className='items-grid-card-info'>
-                <h1>{props.name}</h1>
-                <p>{(props.description != "") ? props.description : 'No Description Fount'}</p>
+                <div className='items-grid-card-info'>
+                    <h1>{props.name}</h1>
+                    <p>{(props.description != "") ? props.description : 'No Description Fount'}</p>
+                </div>
             </div>
-        </div>
+        </a>
     )
 }
 

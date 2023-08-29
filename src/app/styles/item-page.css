@@ -1,0 +1,16 @@
+.item-page-bounds {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.item-page-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1536px;
+    height: 100%;
+    position: relative;
+}
