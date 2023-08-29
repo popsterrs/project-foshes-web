@@ -12,40 +12,12 @@ function GetItems() {
         });
 }
 
-function GetImageURLs(imageIds) {
-    const ids=imageIds.join(',')
-
-    console.log('called')
-
-    // return fetch(`http://thumbnails.roblox.com/v1/assets?assetIds=${ids}&returnPolicy=PlaceHolder&size=512x512&format=Png&isCircular=false`, { mode: 'no-cors'})
-    //     .then(result => {
-    //         result = result.json();
-    //     })
-    //     .then(data => {
-    //         console.log(data);
-    //     })
-    //     .catch(error => {
-    //         console.log(error);
-    //     });
-
-    fetch(`http://thumbnails.roblox.com/v1/assets?assetIds=${ids}&returnPolicy=PlaceHolder&size=512x512&format=Png&isCircular=false`, { mode: 'no-cors' })
-    .then(result => {
-        return result.json(); // Add a return statement here
-    })
-    .then(data => {
-        console.log(data);
-    })
-    .catch(error => {
-        console.error('An error occurred:', error);
-    });
-}
-
 function Image(props) {
     if (props.hasOwnProperty('icon')) {
-        return (
-            <div>
+        const imageUrl = 'https://assetdelivery.roblox.com/v1/asset/?id=' + props.icon
 
-            </div>
+        return (
+            <img src={imageUrl}></img>  
         )
     } else {
         return (
@@ -69,24 +41,11 @@ function ItemCard(props) {
 
 function ItemsGrid() {
     const [items, setItems] = useState([]);
-    const imageIDs = [];
-    const [imageUrls, setImageUrls] = useState([]);
 
     useEffect(() => {
         async function fetchData() {
             const fetchedItems = await GetItems();
             setItems(fetchedItems);
-
-            for (const item of fetchedItems) {
-                imageIDs.push(item.icon)
-            };
-
-            const fetchedImageUrls = await GetImageURLs(imageIDs);
-            setImageUrls(fetchedImageUrls);
-
-            console.log(JSON.stringify(fetchedImageUrls));
-            console.log(imageUrls);
-            console.log(JSON.stringify(imageUrls));
         }
         fetchData();
     }, []);
