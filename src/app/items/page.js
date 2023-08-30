@@ -32,11 +32,23 @@ function ItemsGrid() {
         fetchData();
     }, []);
 
+    function Items() {
+        if(items != []) {
+            return (
+                items.map(item => (
+                    <ItemCard key={item.id}{...item}></ItemCard>
+                ))
+            )
+        } else {
+            return (
+                <p>No Items Found</p>
+            )
+        }
+    };
+
     return (
         <div className='items-grid'>
-            {items.map(item => (
-                <ItemCard key={item.id}{...item}></ItemCard>
-            ))}
+            <Items/>
         </div>
     )
 }
