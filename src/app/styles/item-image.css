@@ -3,18 +3,23 @@
     flex-direction: column;
     height: 100%;
     width: 100%;
-    padding: 1rem;
+    padding: 0.5rem;
 }
 
 .no-image-found-card span {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
     color: var(--colour-9);
     opacity: 0.4;
 }
 
 .no-image-found-card-img {
-    height: 60%;
-    width: 100%;
-    color: var(--colour-9);
-    opacity: 0.1;
+    height: 80% !important;
+    width: 100% !important;
+    /* color: var(--colour-9);
+    opacity: 0.1; */
+    fill: var(--colour-9) !important;
+    opacity: 0.05;
 }
