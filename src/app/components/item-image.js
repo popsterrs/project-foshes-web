@@ -13,8 +13,8 @@ export default function Image(props) {
         return (
             <div className='no-image-found-card'>
                 <span>No Image Found</span>
-                
-                {props.item_type === 2 ? (
+
+                {props.item_type === 1 ? (
                     <IconKnife className='no-image-found-card-img' />
                 ) : (
                     <FaRegImage className='no-image-found-card-img' />
