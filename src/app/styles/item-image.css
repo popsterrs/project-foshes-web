@@ -1,0 +1,20 @@
+.no-image-found-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+}
+
+.no-image-found-card span {
+    text-align: center;
+    color: var(--colour-9);
+    opacity: 0.4;
+}
+
+.no-image-found-card-img {
+    height: 60%;
+    width: 100%;
+    color: var(--colour-9);
+    opacity: 0.1;
+}
