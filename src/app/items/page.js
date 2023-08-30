@@ -1,8 +1,6 @@
-'use client'
 import 'src/app/styles/items.css'
 import Image from 'src/app/components/item-image.js';
 import { GetItems } from 'src/app/scripts/data.js';
-import React, { useState, useEffect } from 'react';
 
 function ItemCard(props) {
     const itemPageUrl = 'items/' + props.id
@@ -21,16 +19,8 @@ function ItemCard(props) {
     )
 }
 
-function ItemsGrid() {
-    const [items, setItems] = useState([]);
-
-    useEffect(() => {
-        async function fetchData() {
-            const fetchedItems = await GetItems();
-            setItems(fetchedItems);
-        }
-        fetchData();
-    }, []);
+async function ItemsGrid() {
+    const items = await GetItems();
 
     function Items() {
         if(items != []) {

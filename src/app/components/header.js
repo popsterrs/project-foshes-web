@@ -1,4 +1,3 @@
-'use client'
 import 'src/app/styles/header.css';
 import { PrimaryButton, SecondaryButton } from 'src/app/components/ui/buttons.js'
 
