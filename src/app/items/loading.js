@@ -5,7 +5,7 @@ export default function Loading() {
     function LoadingItemCard() {
         return (
             <div className='items-grid-card'>
-                <div className='loading-card' />
+                <div className='loading-card'/>
             </div>
         )
     }
@@ -14,15 +14,15 @@ export default function Loading() {
     const loopArray = Array.from({ length: loadingCardsAmmount });
 
     return (
-        // <div className='items-bounds'>
-        //     <div className='items-wrapper'>
-        //         <div className='items-grid'>
-        //             {loopArray.map(item => (
-        //                 <LoadingItemCard/>
-        //             ))}
-        //         </div>
-        //     </div>
-        // </div>
-        <h1> loading</h1>
+        <div className='items-bounds'>
+            <div className='items-wrapper'>
+                <div className='items-grid'>
+                    {loopArray.map(item => (
+                        <LoadingItemCard/>
+                    ))}
+                </div>
+            </div>
+        </div>
+        // <h1> loading</h1>
     )
 }

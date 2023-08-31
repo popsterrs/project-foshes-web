@@ -1,19 +1,9 @@
-'use client'
 import 'src/app/styles/item-page.css'
 import Image from 'src/app/components/item-image.js';
 import { GetItemById } from 'src/app/scripts/data.js';
-import { useState, useEffect } from 'react';
 
-export default function ItemPage({params}) {
-    const [item, setItem] = useState([]);
-
-    useEffect(() => {
-        async function fetchItemData() {
-            const fetchedItemData = await GetItemById(params.id);
-            setItem(fetchedItemData);
-        }
-        fetchItemData();
-    }, []);
+export default async function ItemPage({params}) {
+    const item = await GetItemById(params.id);
 
     return (
         <div class='item-page-bound'>
