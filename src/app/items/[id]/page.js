@@ -10,11 +10,11 @@ function ItemPageLeft(item) {
     )
 }
 
-function ItemPageRightInfo(name, value) {
+function ItemPageRightInfo(props) {
     return (
         <div class='item-page-right-info-row'>
-            <span>{String(name)}</span>
-            <p>{String(value)}</p>
+            <span>{props.name}</span>
+            <p>{props.value}</p>
         </div>
     )
 }
@@ -25,17 +25,26 @@ function ItemPageRight(item) {
             <div class='item-page-right-row'>
                 <h1>{item.name}</h1>
             </div>
+
             <div class='item-page-right-row'>
                 <p>{(item.description != "") ? item.description : 'No Description Found'}</p>
+            </div>
+            <div class='item-page-right-row'>
 
                 <div class='item-page-right-info'>
                     <div class='item-page-right-info-column'>
-                        <ItemPageRightInfo name='Obtainable' value={JSON.stringify(item.obtainable)}/>
+                        <ItemPageRightInfo name='Obtainable:' value={(item.obtainable) ? 'Yes' : 'No'} />
+                        <ItemPageRightInfo name='Item type:' value={(item.item_type == 1) ? 'Knife' : 'Gun'} />
+                        <ItemPageRightInfo name='Index:' value={item.id} />
+                        <ItemPageRightInfo name='Placeholder:' value='nil' />
                     </div>
 
                     <div class='item-page-right-info-column'>
-
-                    </div>  
+                        <ItemPageRightInfo name='Placeholder:' value='nil' />
+                        <ItemPageRightInfo name='Placeholder:' value='nil' />
+                        <ItemPageRightInfo name='Placeholder:' value='nil' />
+                        <ItemPageRightInfo name='Placeholder:' value='nil' />
+                    </div>
                 </div>
             </div>
         </div>
