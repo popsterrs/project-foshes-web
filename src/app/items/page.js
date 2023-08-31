@@ -26,7 +26,7 @@ async function ItemsGrid() {
         if(items != []) {
             return (
                 items.map(item => (
-                    <ItemCard key={item.id}{...item}></ItemCard>
+                    <ItemCard key={item.id}{...item}/>
                 ))
             )
         } else {
@@ -47,7 +47,7 @@ export default function Items() {
     return (
         <div className='items-bounds'>
             <div className='items-wrapper'>
-                <ItemsGrid></ItemsGrid>
+                <ItemsGrid/>
             </div>
         </div>
     )
