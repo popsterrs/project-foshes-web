@@ -1,11 +1,11 @@
 import 'src/app/styles/item-page.css'
-import Image from 'src/app/components/item-image.js';
+import ItemImage from 'src/app/components/item-image.js';
 import { GetItemById } from 'src/app/scripts/data.js';
 
 function ItemPageLeft(item) {
     return (
         <div className='item-page-left'>
-            <Image {...item} />
+            <ItemImage {...item} />
         </div>
     )
 }

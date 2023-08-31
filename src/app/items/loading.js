@@ -18,7 +18,7 @@ export default function Loading() {
             <div className='items-wrapper'>
                 <div className='items-grid'>
                     {loopArray.map(item => (
-                        <LoadingItemCard/>
+                        <LoadingItemCard  key={item}/>
                     ))}
                 </div>
             </div>

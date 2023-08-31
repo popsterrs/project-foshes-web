@@ -7,7 +7,8 @@ export default function Image(props) {
         const imageUrl = 'https://assetdelivery.roblox.com/v1/asset/?id=' + props.icon
 
         return (
-            <img src={imageUrl}></img>  
+            // <img src={imageUrl} alt='item image'></img>  
+            <Image src={imageUrl} alt='item image'></Image>
         )
     } else {
         return (

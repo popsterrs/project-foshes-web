@@ -1,6 +1,6 @@
 import 'src/app/styles/loading.css'
 import 'src/app/styles/item-page.css'
-import Image from 'src/app/components/item-image.js';
+import ItemImage from 'src/app/components/item-image.js';
 
 export default function Loading() {
 
@@ -12,7 +12,7 @@ export default function Loading() {
             <div className='item-page-wrapper'>
                 <div className='item-page-top'>
                     <div className='item-page-left'>
-                        <Image/>
+                        <ItemImage/>
                     </div>
 
                     <div className='item-page-right'>
