@@ -3,7 +3,7 @@ import { IconKnife } from 'src/app/components/ui/icons.js'
 import 'src/app/styles/item-image.css'
 
 export default function Image(props) {
-    if (props.hasOwnProperty('icon')) {
+    if (props && props.hasOwnProperty('icon')) {
         const imageUrl = 'https://assetdelivery.roblox.com/v1/asset/?id=' + props.icon
 
         return (
