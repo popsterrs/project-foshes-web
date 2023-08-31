@@ -93,6 +93,7 @@
 
 @media (max-width: 700px) {
   .header-navbar {
+    display: none;
     position: fixed;
     align-items: start;
     display: flex;
