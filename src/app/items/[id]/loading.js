@@ -12,7 +12,7 @@ export default function Loading() {
             <div className='item-page-wrapper'>
                 <div className='item-page-top'>
                     <div className='item-page-left'>
-                        <ItemImage/>
+                        
                     </div>
 
                     <div className='item-page-right'>
