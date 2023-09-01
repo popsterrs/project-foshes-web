@@ -15,11 +15,19 @@
     position: relative;
 }
 
+.items-wrapper p {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .items-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 10px;
     width: 100%;
+    min-height: 100vh;
     padding: 1rem;
 }
 

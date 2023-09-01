@@ -17,6 +17,8 @@
   --accent-1: rgba(81, 12, 243, 0.295);
   --accent-2: rgba(29, 18, 125, 0.73);
 
+  --error-1: rgb(249, 131, 131);
+
   --header-brightness: 90%; 
   --header-navbar-colour: rgba(198, 198, 198, 0.3);
   --dot-colour: rgba(150, 150, 150, 0.4);
@@ -88,6 +90,10 @@ p {
   height: 100%;
   filter: blur(0px);
   z-index: 100;
+}
+
+.error {
+  color: var(--error-1);
 }
 
 @media (prefers-color-scheme: dark) {

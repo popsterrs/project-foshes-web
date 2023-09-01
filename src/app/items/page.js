@@ -1,3 +1,4 @@
+'use client'
 import 'src/app/styles/items.css'
 import ItemImage from 'src/app/components/item-image.js';
 import { GetItems } from 'src/app/scripts/data.js';
@@ -23,7 +24,7 @@ async function ItemsGrid() {
     const items = await GetItems();
 
     function Items() {
-        if(items != []) {
+        if(items && items.length > 0) {
             return (
                 items.map(item => (
                     <ItemCard key={item.id}{...item}/>
@@ -31,7 +32,7 @@ async function ItemsGrid() {
             )
         } else {
             return (
-                <p>No Items Found</p>
+                <p className='error'>Error: No Items Found</p>
             )
         }
     };
