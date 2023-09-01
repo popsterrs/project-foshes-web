@@ -33,6 +33,7 @@
 
 .items-grid a {
     display: block;
+    height: 20rem;
 }
 
 .items-grid-card {
