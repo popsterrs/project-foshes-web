@@ -1,4 +1,3 @@
-'use client'
 import 'src/app/styles/items.css'
 import ItemImage from 'src/app/components/item-image.js';
 import { GetItems } from 'src/app/scripts/data.js';

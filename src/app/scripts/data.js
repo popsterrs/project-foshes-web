@@ -1,4 +1,3 @@
-'use client'
 function GetItems() {
     return fetch('https://api.projectfoshes.com/items')
         .then(response => response.json())
