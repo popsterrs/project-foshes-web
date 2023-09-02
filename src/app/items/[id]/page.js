@@ -35,7 +35,7 @@ function ItemPageRight(item) {
                     <div className='item-page-right-info-column'>
                         <ItemPageRightInfo name='Obtainable:' value={(item.obtainable) ? 'Yes' : 'No'} />
                         <ItemPageRightInfo name='Item type:' value={(item.item_type == 1) ? 'Knife' : 'Gun'} />
-                        <ItemPageRightInfo name='Index:' value={item.id} />
+                        <ItemPageRightInfo name='Index:' value={item._id} />
                         <ItemPageRightInfo name='Placeholder:' value='nil' />
                     </div>
 
@@ -73,7 +73,7 @@ function ItemPageBottom(item) {
 }
 
 export default async function ItemPage({ params }) {
-    const item = await GetItemById(params.id);
+    const item = await GetItemById(params._id);
 
     return (
         <div className='item-page-bounds'>

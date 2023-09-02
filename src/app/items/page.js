@@ -3,7 +3,7 @@ import ItemImage from 'src/app/components/item-image.js';
 import { GetItems } from 'src/app/scripts/data.js';
 
 function ItemCard(props) {
-    const itemPageUrl = 'items/' + props.id
+    const itemPageUrl = 'items/' + props._id
 
     return (
         <a href={itemPageUrl}>
@@ -53,4 +53,4 @@ export default function Items() {
             </div>
         </div>
     )
-}
+} 
