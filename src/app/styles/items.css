@@ -7,12 +7,12 @@
 }
 
 .items-wrapper {
+    position: relative;
     display: flex;
     align-items: center;
     width: 100%;
     max-width: 1536px;
     height: 100%;
-    position: relative;
 }
 
 .items-wrapper p {
@@ -27,7 +27,6 @@
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 10px;
     width: 100%;
-    min-height: 100vh;
     padding: 1rem;
 }
 
@@ -64,21 +63,28 @@
 }
 
 .items-grid-card-info {
-    flex-direction: column;
     position: absolute;
-    bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    bottom: 0rem;
 }
 
 .items-grid-card-info h1 {
+    position: relative;
     width: 100%;
     font-size: 1.5rem;
     text-align: center;
-    color: var(--colour-9)
+    color: var(--colour-9);
+
 }
 
 .items-grid-card-info p {
+    position: relative;
     width: 100%;
     font-size: 1rem;
     text-align: center;
+
 }
 

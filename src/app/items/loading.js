@@ -2,11 +2,26 @@ import 'src/app/styles/loading.css'
 import 'src/app/styles/items.css'
 
 export default function Loading() {
-    function LoadingItemCard() {
+    // function LoadingItemCard() {
+    //     return (
+    //         <div className='items-grid-card'>
+    //             <div className='loading-card'/>
+    //         </div>
+    //     )
+    // }
+
+    function LoadingItemCard(props) {    
         return (
-            <div className='items-grid-card'>
+            <a>
+                <div className='items-grid-card'>
                 <div className='loading-card'/>
-            </div>
+    
+                    <div className='items-grid-card-info'>
+                        <h1></h1>
+                        <p></p>
+                    </div>
+                </div>
+            </a>
         )
     }
 
