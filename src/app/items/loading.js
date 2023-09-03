@@ -25,7 +25,7 @@ export default function Loading() {
         )
     }
 
-    const loadingCardsAmmount = 20
+    const loadingCardsAmmount = 50
     const loopArray = Array.from({ length: loadingCardsAmmount });
 
     return (
