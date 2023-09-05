@@ -2,24 +2,11 @@ import 'src/app/styles/loading.css'
 import 'src/app/styles/items.css'
 
 export default function Loading() {
-    // function LoadingItemCard() {
-    //     return (
-    //         <div className='items-grid-card'>
-    //             <div className='loading-card'/>
-    //         </div>
-    //     )
-    // }
-
-    function LoadingItemCard(props) {    
+    function LoadingItemCard(props) {
         return (
             <a>
                 <div className='items-grid-card'>
-                <div className='loading-card'/>
-    
-                    <div className='items-grid-card-info'>
-                        <h1></h1>
-                        <p></p>
-                    </div>
+                    <div className='loading-card' />
                 </div>
             </a>
         )
@@ -33,7 +20,7 @@ export default function Loading() {
             <div className='items-wrapper'>
                 <div className='items-grid'>
                     {loopArray.map(item => (
-                        <LoadingItemCard  key={item}/>
+                        <LoadingItemCard key={item} />
                     ))}
                 </div>
             </div>
