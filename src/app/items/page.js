@@ -34,7 +34,6 @@ async function ItemsGrid() {
                 <p className='error'>Error: No Items Found</p>
             )
         }
-
         // return <code>{JSON.stringify(items, null, 4)}</code>
     };
 
