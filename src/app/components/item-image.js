@@ -8,7 +8,6 @@ export default function Image(props) {
 
         return (
             <img src={imageUrl} alt='item image'></img>  
-            // <Image src={imageUrl} alt='item image'></Image>
         )
     } else {
         return (
