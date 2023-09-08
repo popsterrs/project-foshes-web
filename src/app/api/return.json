@@ -1,0 +1,97 @@
+[
+    {
+        "_id": 10,
+        "description": "",
+        "name": "Ultium Knife",
+        "item_type": 1,
+        "icon": 14485330796,
+        "obtainable": true
+    },
+    {
+        "_id": 2,
+        "description": "",
+        "name": "Default Gun",
+        "obtainable": false,
+        "icon": 97889613,
+        "item_type": 2
+    },
+    {
+        "_id": 5,
+        "description": "",
+        "name": "Fenyx Knife",
+        "item_type": 1,
+        "icon": 14587273955,
+        "obtainable": true
+    },
+    {
+        "_id": 1,
+        "description": "Gotta start out somewhere...",
+        "name": "Default Knife",
+        "obtainable": false,
+        "icon": 128720392,
+        "item_type": 1
+    },
+    {
+        "_id": 3,
+        "description": "",
+        "name": "Allon Knife",
+        "item_type": 1,
+        "icon": 14587276982,
+        "obtainable": true
+    },
+    {
+        "_id": 9,
+        "description": "",
+        "name": "Trollium Knife",
+        "item_type": 1,
+        "icon": 14485329584,
+        "obtainable": true
+    },
+    {
+        "_id": 12,
+        "name": "Awesome Sauce",
+        "obtainable": true,
+        "description": "",
+        "item_type": 1
+    },
+    {
+        "_id": 4,
+        "description": "",
+        "name": "Emberite Knife",
+        "item_type": 1,
+        "icon": 14587244254,
+        "obtainable": true
+    },
+    {
+        "_id": 6,
+        "description": "",
+        "name": "Dioron Knife",
+        "item_type": 1,
+        "icon": 14587270810,
+        "obtainable": true
+    },
+    {
+        "_id": 7,
+        "description": "",
+        "name": "Frostium Knife",
+        "item_type": 1,
+        "icon": "14485326479",
+        "obtainable": true
+    },
+    {
+        "_id": 8,
+        "description": "",
+        "name": "Mynix Knife",
+        "item_type": 1,
+        "icon": 14485328032,
+        "obtainable": true
+    },
+    {
+        "_id": 11,
+        "description": "",
+        "name": "Foshonium Knife",
+        "item_type": 1,
+        "icon": 14485324644,
+        "obtainable": true
+    }
+]
