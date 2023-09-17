@@ -1,19 +1,7 @@
-// async function GetItems() {
-//     return fetch('https://api.projectfoshes.com/items')
-//         .then(response => response.json())
-//         .then(data => {
-//             console.log(data);
-//             return data.items;
-//         })
-//         .catch(error => {
-//             console.error('Error fetching data:', error);
-//             return [];
-//         });
-// }
-
 async function GetItems() {
     try {
-      const apiUrl = 'https://api.projectfoshes.com/items';
+    //   const apiUrl = 'https://api.projectfoshes.com/items';
+      const apiUrl = 'https://scrape.pastebin.com/api_scrape_item.php?i='
       const response = await fetch(apiUrl);
   
       if (!response.ok) {
