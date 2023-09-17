@@ -1,6 +1,6 @@
 async function GetItems() {
     try {
-    //   const apiUrl = 'https://api.projectfoshes.com/items';
+      const apiUrl = 'https://api.projectfoshes.com/items';
       const apiUrl = 'https://scrape.pastebin.com/api_scrape_item.php?i='
       const response = await fetch(apiUrl);
   
