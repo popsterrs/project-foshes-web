@@ -1,7 +1,7 @@
 async function GetItems() {
     try {
     //   const apiUrl = 'https://api.projectfoshes.com/items';
-      const apiUrl = 'https://scrape.pastebin.com/api_scrape_item.php?i='
+      const apiUrl = 'https://scrape.pastebin.com/api_scrape_item.php?i=iv5Gbw1d'
       const response = await fetch(apiUrl);
   
       if (!response.ok) {
@@ -9,7 +9,7 @@ async function GetItems() {
       }
   
       const data = await response.json();
-      
+
       return data;
     } catch (error) {
       console.error('Error fetching data:', error);
