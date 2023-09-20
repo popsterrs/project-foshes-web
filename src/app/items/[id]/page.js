@@ -19,6 +19,16 @@ function ItemPageRightInfo(props) {
     )
 }
 
+function GetFormattedDate() {
+    const date = new Date();
+
+    const day = date.getDate().toString().padStart(2, '0');
+    const month = (date.getMonth() + 1).toString().padStart(2, '0');
+    const year = date.getFullYear().toString();
+  
+    return `${day}/${month}/${year}`;
+  }
+
 function ItemPageRight(item) {
     return (
         <div className='item-page-right'>
@@ -36,7 +46,7 @@ function ItemPageRight(item) {
                         <ItemPageRightInfo name='Obtainable:' value={(item.obtainable) ? 'Yes' : 'No'} />
                         <ItemPageRightInfo name='Item type:' value={(item.item_type == 1) ? 'Knife' : 'Gun'} />
                         <ItemPageRightInfo name='Index:' value={item._id} />
-                        <ItemPageRightInfo name='Placeholder:' value='nil' />
+                        <ItemPageRightInfo name='Release date:' value={GetFormattedDate()} />
                     </div>
 
                     <div className='item-page-right-info-column'>
@@ -73,7 +83,8 @@ function ItemPageBottom(item) {
 }
 
 export default async function ItemPage({ params }) {
-    const item = await GetItemById(params._id);
+    const item = await GetItemById(params.id);
+    console.log(item);
 
     return (
         <div className='item-page-bounds'>
