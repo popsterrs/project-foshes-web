@@ -8,7 +8,6 @@ async function GetItems() {
       }
   
       const data = await response.json();
-    console.log(data);
 
       return data;
     } catch (error) {
@@ -22,7 +21,7 @@ async function GetItems() {
 async function GetItemById(itemId) {
     const items = await GetItems();
 
-    return items.find(item => item.id === Number(itemId));
+    return items.find(item => item._id === Number(itemId));
 }
 
 export {
