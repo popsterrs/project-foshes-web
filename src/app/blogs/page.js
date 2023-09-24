@@ -4,13 +4,12 @@ import { GetMediumBlogPosts } from 'src/app/scripts/data.js';
 
 function Blogs() {
     function BlogCard(props) {
-        const blogPageUrl = 'blogs/' + props.title
+        const blogPageUrl = 'blogs/' + props.guid.slice(21, 33)
     
         return (
             <a href={blogPageUrl}>
                 <div className='blogs-grid-item card'>    
                     <h1>{props.title}</h1>
-                    {StringToHTML(props.description)};
                     <h3 className='blogs-grid-item-author'>{props.author}</h3>
                     <h4 className='blogs-grid-item-publish-date'>{props.pubDate.slice(0, 10)}</h4>
                 </div>
