@@ -7,3 +7,12 @@
     height: calc(100vh + 4rem);
     overflow: hidden;
 }
+
+.blogs-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1536px;
+    height: 100%;
+}
