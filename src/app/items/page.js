@@ -1,4 +1,4 @@
-import 'src/app/styles/items.css'
+import 'src/app/styles/items.css';
 import ItemImage from 'src/app/components/item-image.js';
 import { GetItems } from 'src/app/scripts/data.js';
 
@@ -7,7 +7,7 @@ function ItemCard(props) {
 
     return (
         <a href={itemPageUrl}>
-            <div className='items-grid-card'>
+            <div className='items-grid-card card'>
                 <ItemImage {...props} />
 
                 <div className='items-grid-card-info'>
