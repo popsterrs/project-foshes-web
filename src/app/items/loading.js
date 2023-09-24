@@ -5,7 +5,7 @@ export default function Loading() {
     function LoadingItemCard(props) {
         return (
             <a>
-                <div className='items-grid-card'>
+                <div className='items-grid-card card'>
                     <div className='loading-card' />
                 </div>
             </a>
