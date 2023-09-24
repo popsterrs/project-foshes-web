@@ -1,0 +1,15 @@
+.blog-page-bounds {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.blog-page-wrapper {
+    width: 100%;
+    max-width: 736px;
+    height: 100%;
+    min-height: 100vh;
+}
