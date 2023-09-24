@@ -92,6 +92,22 @@ p {
   z-index: 100;
 }
 
+.card {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem;
+  border-radius: var(--border-radius);
+  background-color: var(--colour-1);
+}
+
+.card:hover {
+  background: var(--colour-0);
+  box-shadow: 0 0 0 1px var(--colour-2);
+}
+
 .error {
   color: var(--error-1);
 }
