@@ -43,8 +43,15 @@ async function GetMediumBlogPosts(user) {
   }
 }
 
+async function GetBlogByGUID(guid) {
+  const blogs = await GetMediumBlogPosts('@william_hamilton');
+
+  return blogs.items.find(blog => blog.guid === 'https://medium.com/p/' + guid);
+}
+
 export {
     GetItems,
     GetItemById,
     GetMediumBlogPosts,
+    GetBlogByGUID,
 }
