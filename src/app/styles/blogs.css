@@ -4,15 +4,23 @@
     justify-content: center;
     position: relative;
     width: 100vw;
-    height: calc(100vh + 4rem);
     overflow: hidden;
 }
 
 .blogs-wrapper {
-    position: relative;
-    display: flex;
-    align-items: center;
     width: 100%;
     max-width: 1536px;
     height: 100%;
+}
+
+.blogs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 10px;
+    width: 100%;
+    padding: 1rem;
+}
+
+.blogs-grid-item {
+    height: 25rem;
 }
