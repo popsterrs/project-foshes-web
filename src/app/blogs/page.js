@@ -1,32 +1,73 @@
-'use client'
-import React, { useEffect } from 'react';
+import 'src/app/styles/blogs.css';
+import 'src/app/styles/buttons.css';
+import { GetMediumBlogPosts } from 'src/app/scripts/data.js';
 
 function Blogs() {
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://www.twilik.com/assets/retainable/rss-embed/retainable-rss-embed.js';
-    script.async = true;
+    function BlogCard(props) {
+        const blogPageUrl = 'blogs/' + props.title
+    
+        return (
+            <a href={blogPageUrl}>
+                <div className='blogs-grid-item card'>    
+                <h1>{props.title}</h1>
+                    {/* <div className='items-grid-card-info'>
+                        <h1>{props.title}</h1>
+                        <p>{(props.description != "") ? props.description : 'No Description Found'}</p>
+                    </div> */}
+                </div>
+            </a>
+        )
+    }
 
-    document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
+    async function BlogsGrid() {
+        const blogs = await GetMediumBlogPosts('@william_hamilton');
+    
+        function Blogs() {
+            if(blogs) {
+                return (
+                    blogs.items.map(blog => (
+                        <BlogCard key={blog.title}{...blog}/>
+                    ))
+                )
+            } else {
+                return (
+                    <p className='error'>Error: No Blogs Found</p>
+                )
+            }
+            // return <code>{JSON.stringify(blogs, null, 4)}</code>
+        };
+    
+        return (
+            <div className='blogs-grid'>
+                <Blogs/>
+                <Blogs/>
+                <Blogs/>
+                <Blogs/>
+                <Blogs/>
+                <Blogs/>
+                <Blogs/>
+                <Blogs/>
+                <Blogs/>
+                <Blogs/>
+                <Blogs/>
+                <Blogs/>
+                <Blogs/>
+                <Blogs/>
+                <Blogs/>
+                <Blogs/>
+                <Blogs/>
+                <Blogs/>
+                <Blogs/>
+                <Blogs/>
+                <Blogs/>
+            </div>
+        )
+    }
 
   return (
     <div className='blogs-bounds'>
-      <div className='blogs-holder'>
-        <div
-          id="retainable-rss-embed"
-          data-rss="https://medium.com/feed/retainable,https://medium.com/feed/vue-mastery"
-          data-maxcols="3"
-          data-layout="grid"
-          data-poststyle="inline"
-          data-readmore="Read the rest"
-          data-buttonclass="btn btn-primary"
-          data-offset="-100"
-        ></div>
+      <div className='blogs-wrapper'>
+        <BlogsGrid/>
       </div>
     </div>
   );
