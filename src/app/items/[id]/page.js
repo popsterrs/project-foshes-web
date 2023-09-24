@@ -84,7 +84,6 @@ function ItemPageBottom(item) {
 
 export default async function ItemPage({ params }) {
     const item = await GetItemById(params.id);
-    console.log(item);
 
     return (
         <div className='item-page-bounds'>
