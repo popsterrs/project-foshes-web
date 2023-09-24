@@ -9,11 +9,10 @@ function Blogs() {
         return (
             <a href={blogPageUrl}>
                 <div className='blogs-grid-item card'>    
-                <h1>{props.title}</h1>
-                    {/* <div className='items-grid-card-info'>
-                        <h1>{props.title}</h1>
-                        <p>{(props.description != "") ? props.description : 'No Description Found'}</p>
-                    </div> */}
+                    <h1>{props.title}</h1>
+                    {StringToHTML(props.description)};
+                    <h3 className='blogs-grid-item-author'>{props.author}</h3>
+                    <h4 className='blogs-grid-item-publish-date'>{props.pubDate.slice(0, 10)}</h4>
                 </div>
             </a>
         )
