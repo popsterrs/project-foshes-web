@@ -108,6 +108,10 @@ p {
   box-shadow: 0 0 0 1px var(--colour-2);
 }
 
+.pre {
+  color: red;
+}
+
 .error {
   color: var(--error-1);
 }
